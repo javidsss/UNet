@@ -64,7 +64,7 @@ if 'model' not in globals():
     model = UNet(inputchannels=1, outputchannels=1).to(DEVICE)
 if 'model' in globals():
     model = model.to(DEVICE)
-# summary(model, (3, 160, 240)) #Added by Javid to check the model summary
+# summary(model, (3, 160, 240))
 
 loss_Func = nn.BCEWithLogitsLoss()
 Optimization = torch.optim.Adam(model.parameters(), lr=learning_rate)

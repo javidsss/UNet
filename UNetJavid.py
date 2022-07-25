@@ -11,14 +11,14 @@ from torch.utils.data import Dataset, DataLoader
 import math
 from sklearn.model_selection import train_test_split
 
-def DoubleConvJavid(in_ch, out_ch):
-    conv_fun = nn.Sequential(
-        nn.Conv2d(in_ch, out_ch, kernel_size=3, padding=1, stride=1, bias=False),
-        nn.ReLU(inplace=True),
-        nn.Conv2d(out_ch, out_ch, kernel_size=3, padding=1, stride=1, bias=False),
-        nn.ReLU(inplace=True)
-    )
-    return conv_fun
+# def DoubleConvJavid(in_ch, out_ch):
+#     conv_fun = nn.Sequential(
+#         nn.Conv2d(in_ch, out_ch, kernel_size=3, padding=1, stride=1, bias=False),
+#         nn.ReLU(inplace=True),
+#         nn.Conv2d(out_ch, out_ch, kernel_size=3, padding=1, stride=1, bias=False),
+#         nn.ReLU(inplace=True)
+#     )
+#     return conv_fun
 
 class DoubleConv(nn.Module):
     def __init__(self, in_channels, out_channels):
