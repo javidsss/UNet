@@ -14,7 +14,7 @@ from DataLoaderCerebellum import CerebellumData
 import albumentations as A
 from albumentations.pytorch import ToTensorV2
 from PIL import Image
-# from ModelFromYoutube import UNET
+
 from torchvision import models #Added by Javid for checking the model summary
 from torchsummary import summary #Added by Javid for checking the model summary
 
@@ -111,17 +111,4 @@ plt.figure()
 plt.imshow(images[0, 0, :, :], cmap='gray')
 plt.imshow(testing_output_lable[0, 0, :, :], cmap='gray', alpha=0.7)
 
-
-# for images, labels in iter(dataloader_training):
-#     for j in range(1):
-#         plt.figure()
-#         plt.imshow(images[j, 0, :, :], cmap='gray')
-#         plt.imshow(labels[j, 0, :, :], cmap='gray', alpha=0.7)
-#
-#         testing_output_lable = model(images.to(device=DEVICE).unsqueeze(1))
-#         testing_output_lable = testing_output_lable.cpu().detach().numpy()
-#
-#         plt.figure()
-#         plt.imshow(images[j, 0, :, :], cmap='gray')
-#         plt.imshow(testing_output_lable[j, 0, :, :], cmap='gray', alpha=0.7)
 
